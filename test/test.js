@@ -7,10 +7,10 @@ var expect = chai.expect;
 require(__dirname + '/../http_server');
 
 
-describe('time test', function() {
-    it('should return the current time of the server', function(done) {
+describe('GET test', function() {
+    it('should return 200 for a GET request', function(done) {
         chai.request('localhost:3000')
-            .get('/time')
+            .method('GET')
             .end(function(err, res){
                 expect(err).to.eql(null);
                 expect(res.status).to.eql(200);
@@ -19,22 +19,22 @@ describe('time test', function() {
     });
 });
 
-describe('greet name test', function() {
-    it('should respond to greet with the name given', function() {
+describe('/data test', function() {
+    it('should save data to a file', function() {
         chai.request('localhost:3000')
-            .get('/greet/name')
+            .get('/data')
             .end(function(err, res){
                 expect(err).to.eql(null);
                 expect(res.status).to.eql(200);
-                expect(res.text).to.eql('hello, name');
+                expect(res.text).to.not.eql(null);
             });
     });
 });
 
 describe('POST to JSON test', function() {
-    it('should post name to JSON object', function() {
+    it('should save POST request to JSON file', function() {
         chai.request('localhost:3000')
-            .get('/greet')
+            .method('POST')
             .end(function(err, res){
                 expect(err).to.eql(null);
                 expect(res.status).to.eql(200);
@@ -43,9 +43,9 @@ describe('POST to JSON test', function() {
 });
 
 describe('404 test', function() {
-    it('should send 404 error for other url requests', function() {
+    it('should send 404 error for other req.methods', function() {
         chai.request('localhost:3000')
-            .get('/other')
+            .method('DELETE')
             .end(function(err, res){
                 expect(res.status).to.eql(404);
             });
