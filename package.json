@@ -4,6 +4,8 @@
   "description": "a simple http server with persistence to handle GET/POST requests",
   "main": "index.js",
   "directories": {
+    "data": "data",
+    "lib": "lib",
     "test": "test"
   },
   "devDependencies": {
@@ -15,6 +17,7 @@
     "gulp-mocha": "^2.1.3"
   },
   "scripts": {
+    "default": "gulp",
     "test": "mocha"
   },
   "repository": {
