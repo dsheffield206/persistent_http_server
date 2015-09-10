@@ -8,5 +8,5 @@ var chai = require('chai');
 gulp.task('default', ['http']);
 
 gulp.task('jshint', function() {
-  return gulp.src(['http_server.js', 'test/**/*.js', 'gulpfile.js']);
+  return gulp.src(['lib/**/*.js', 'test/**/*.js', 'gulpfile.js', 'index.js']);
 });
