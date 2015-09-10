@@ -1,0 +1,32 @@
+{
+  "name": "persistent_http_server",
+  "version": "1.0.0",
+  "description": "a simple http server with persistence to handle GET/POST requests",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.2.0",
+    "chai-http": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-mocha": "^2.1.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsheffield206/persistent_http_server.git"
+  },
+  "author": "David Sheffield",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dsheffield206/persistent_http_server/issues"
+  },
+  "homepage": "https://github.com/dsheffield206/persistent_http_server#readme"
+}
