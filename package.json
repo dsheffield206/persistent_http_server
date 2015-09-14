@@ -18,7 +18,7 @@
   },
   "scripts": {
     "default": "gulp",
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha test"
   },
   "repository": {
     "type": "git",
